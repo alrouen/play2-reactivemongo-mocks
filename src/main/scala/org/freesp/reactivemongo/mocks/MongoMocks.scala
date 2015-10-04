@@ -1,12 +1,13 @@
-package com.themillhousegroup.reactivemongo.mocks
+package org.freesp.reactivemongo.mocks
 
 // Reactive Mongo imports
 
+import org.freesp.reactivemongo.mocks.facets._
 import reactivemongo.api.CollectionProducer
 import reactivemongo.api.collections.GenericQueryBuilder
 import reactivemongo.api.DefaultDB
 import reactivemongo.api.FailoverStrategy
-import com.themillhousegroup.reactivemongo.mocks.facets._
+import org.freesp.reactivemongo.mocks.facets._
 
 //// Reactive Mongo plugin
 import play.modules.reactivemongo.json.collection.{ JSONQueryBuilder, JSONCollection }

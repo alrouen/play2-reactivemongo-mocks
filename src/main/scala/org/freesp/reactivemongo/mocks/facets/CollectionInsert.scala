@@ -1,4 +1,4 @@
-package com.themillhousegroup.reactivemongo.mocks.facets
+package org.freesp.reactivemongo.mocks.facets
 
 import play.modules.reactivemongo.json.collection.{ JSONQueryBuilder, JSONCollection }
 import org.specs2.mock.Mockito
@@ -13,9 +13,7 @@ trait CollectionInsert extends MongoMockFacet {
 
   var uncheckedInserts = Seq[Any]()
 
-  private def setupMongoInserts(targetCollection: JSONCollection,
-    insertMatcher: => JsObject,
-    ok: Boolean) = {
+  private def setupMongoInserts(targetCollection: JSONCollection, insertMatcher: => JsObject, ok: Boolean) = {
 
     // Nothing to mock an answer for - it's unchecked - but we record the insert to be useful
     targetCollection.uncheckedInsert(insertMatcher)(anyJsWrites) answers { o =>
@@ -23,7 +21,7 @@ trait CollectionInsert extends MongoMockFacet {
       logger.debug(s"unchecked insert of $o, recorded for verification (${uncheckedInserts.size})")
     }
 
-    targetCollection.insert(insertMatcher)(anyEC) answers { o =>
+    targetCollection.insert(insertMatcher, anyWriteConcern)(anyJsWrites, anyEC) answers { o =>
       logger.debug(s"Insert of object $o will be considered a ${bool2Success(ok)}")
       Future.successful(mockResult(ok))
     }

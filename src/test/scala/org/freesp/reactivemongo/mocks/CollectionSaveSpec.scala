@@ -1,6 +1,6 @@
-package com.themillhousegroup.reactivemongo.mocks
+package org.freesp.reactivemongo.mocks
 
-import com.themillhousegroup.reactivemongo.test.CommonMongoTests
+import org.freesp.reactivemongo.test.CommonMongoTests
 import org.specs2.mutable.Specification
 
 class CollectionSaveSpec extends Specification with CommonMongoTests {

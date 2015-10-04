@@ -1,8 +1,8 @@
-package com.themillhousegroup.reactivemongo.mocks
+package org.freesp.reactivemongo.mocks
 
 import org.specs2.mutable.Specification
 import scala.concurrent.duration.Duration
-import com.themillhousegroup.reactivemongo.test.CommonMongoTests
+import org.freesp.reactivemongo.test.CommonMongoTests
 
 class MongoMocksDefaultDBSpec extends Specification with CommonMongoTests {
 

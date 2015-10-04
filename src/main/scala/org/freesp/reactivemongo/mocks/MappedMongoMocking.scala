@@ -1,4 +1,4 @@
-package com.themillhousegroup.reactivemongo.mocks
+package org.freesp.reactivemongo.mocks
 
 import org.specs2.mock.Mockito
 import reactivemongo.api.DefaultDB

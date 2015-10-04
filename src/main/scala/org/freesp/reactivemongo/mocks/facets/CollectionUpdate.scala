@@ -1,4 +1,4 @@
-package com.themillhousegroup.reactivemongo.mocks.facets
+package org.freesp.reactivemongo.mocks.facets
 
 import play.modules.reactivemongo.json.collection.{ JSONQueryBuilder, JSONCollection }
 import org.specs2.mock.Mockito
@@ -27,7 +27,7 @@ trait CollectionUpdate extends MongoMockFacet {
       selectorMatcher, updateMatcher, anyWriteConcern, anyBoolean, anyBoolean)(
         anyJsWrites, anyJsWrites, anyEC) answers { o =>
           logger.debug(s"Update of object $o will be considered a ${bool2Success(ok)}")
-          Future.successful(mockResult(ok))
+          Future.successful(mockUpdateResult(ok))
         }
   }
 

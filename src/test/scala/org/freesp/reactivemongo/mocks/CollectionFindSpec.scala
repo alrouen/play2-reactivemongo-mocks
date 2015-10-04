@@ -1,9 +1,10 @@
-package com.themillhousegroup.reactivemongo.mocks
+package org.freesp.reactivemongo.mocks
 
 import org.specs2.mutable.Specification
 import play.api.libs.json.{ JsBoolean, JsString, JsObject }
+import play.modules.reactivemongo.json._
 import play.modules.reactivemongo.json.collection.JSONCollection
-import com.themillhousegroup.reactivemongo.test.CommonMongoTests
+import org.freesp.reactivemongo.test.CommonMongoTests
 import org.specs2.specification.Scope
 import scala.concurrent.Await
 

@@ -1,4 +1,4 @@
-package com.themillhousegroup.reactivemongo.mocks.facets
+package org.freesp.reactivemongo.mocks.facets
 
 import reactivemongo.api.{ Cursor, FailoverStrategy }
 import org.mockito.stubbing.Answer
@@ -96,8 +96,8 @@ trait CollectionFind extends MongoMockFacet {
       }
     }
 
-    org.mockito.Mockito.doAnswer(cursorAnswer).when(spiedQB).cursor[JsObject](anyJsReads, anyEC)
-    org.mockito.Mockito.doAnswer(cursorAnswer).when(spiedQB).cursor[JsObject](anyReadPreference)(anyJsReads, anyEC)
+    //org.mockito.Mockito.doAnswer(cursorAnswer).when(spiedQB).cursor[JsObject](anyJsReads, anyEC)
+    org.mockito.Mockito.doAnswer(cursorAnswer).when(spiedQB).cursor[JsObject](anyReadPreference, anyBoolean)(anyJsReads, anyEC, anyCP)
   }
 
   /**

@@ -1,7 +1,8 @@
-package com.themillhousegroup.reactivemongo.mocks
+package org.freesp.reactivemongo.mocks
 
-import com.themillhousegroup.reactivemongo.test.CommonMongoTests
 import org.specs2.mutable.Specification
+import play.modules.reactivemongo.json._
+import org.freesp.reactivemongo.test.CommonMongoTests
 
 class CollectionUpdateSpec extends Specification with CommonMongoTests {
 

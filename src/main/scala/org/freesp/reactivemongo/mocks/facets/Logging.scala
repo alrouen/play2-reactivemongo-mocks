@@ -1,4 +1,4 @@
-package com.themillhousegroup.reactivemongo.mocks.facets
+package org.freesp.reactivemongo.mocks.facets
 
 import org.slf4j._
 

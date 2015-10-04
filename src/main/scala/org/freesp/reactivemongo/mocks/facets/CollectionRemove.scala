@@ -1,4 +1,4 @@
-package com.themillhousegroup.reactivemongo.mocks.facets
+package org.freesp.reactivemongo.mocks.facets
 
 import play.modules.reactivemongo.json.collection.{ JSONQueryBuilder, JSONCollection }
 import org.specs2.mock.Mockito

@@ -1,4 +1,4 @@
-package com.themillhousegroup.reactivemongo.test
+package org.freesp.reactivemongo.test
 
 import play.api.libs.json.{ JsBoolean, JsNumber, JsObject }
 
